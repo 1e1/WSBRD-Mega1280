@@ -23,4 +23,4 @@ class FastTimer {
 };
 
 
-#endif FastTimer_H_
+#endif
