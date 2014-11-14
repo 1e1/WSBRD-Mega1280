@@ -2,10 +2,6 @@
 #define BCONFIG_H_
 
 
-// LED
-#define BUSYLED_PIN   13
-
-
 /** TIME **/
 //==>  >> 0: 1 unit of embedTime is 0.001s
 //-->  const unsigned long maxTime        = 4294967295; // = 49d 17h 02m 47s

@@ -12,6 +12,11 @@ FastTimer	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
+on	KEYWORD2
+custom	KEYWORD2
+work	KEYWORD2
+idle	KEYWORD2
+off	KEYWORD2
 begin	KEYWORD2
 update	KEYWORD2
 getDst	KEYWORD2
