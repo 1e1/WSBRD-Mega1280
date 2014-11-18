@@ -10,7 +10,7 @@
 
 
 
-byte BusyLed::_pin;
+//
 
 
 
@@ -22,8 +22,8 @@ byte BusyLed::_pin;
 
 
 
-void BusyLed::begin(const byte pin)
+LedBuiltin::LedBuiltin(const byte pin)
 {
-  BusyLed::_pin = pin;
-  pinMode(BusyLed::_pin, OUTPUT);
+  this->_pin = pin;
+  pinMode(this->_pin, OUTPUT);
 }
