@@ -19,10 +19,10 @@ class LedBuiltin {
   __attribute__((always_inline)) inline void on  () { digitalWrite(this->_pin, HIGH); };
   __attribute__((always_inline)) inline void off () { digitalWrite(this->_pin,  LOW); };
 
-  //__attribute__((always_inline)) inline void check() { on(); };
-  __attribute__((always_inline)) inline void work()  { this->custom(63); };
-  __attribute__((always_inline)) inline void idle()  { this->custom(15); };
-  __attribute__((always_inline)) inline void clean() { off(); };
+  //inline void check() { on(); };
+  inline void work()  { this->custom(63); };
+  inline void idle()  { this->custom(15); };
+  inline void clean() { off(); };
 
   protected:
   static byte _pin;
