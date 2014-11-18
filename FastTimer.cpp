@@ -39,7 +39,7 @@ void FastTimer::begin()
 const uint8_t FastTimer::update()
 {
   const uint8_t previousTime = FastTimer::_embedTime;
-  FastTimer::_embedTime = EMBEDTIME;
+  FastTimer::_embedTime = WS_EMBEDTIME;
   FastTimer::_section = FastTimer::_embedTime ^ previousTime;
   return FastTimer::_section;
 }

@@ -2,7 +2,7 @@
 #define BusyLed_H_
 
 #include <Arduino.h>
-#include "config.h"
+#include <CoreSlave.h>
 
 
 
@@ -10,7 +10,7 @@
 
 
 
-class LedBuiltin {
+class LedBuiltin : public Circuit {
 
   public:
   LedBuiltin(const byte pin);
@@ -25,7 +25,7 @@ class LedBuiltin {
   inline void clean() { off(); };
 
   protected:
-  static byte _pin;
+  byte _pin;
 
 };
 

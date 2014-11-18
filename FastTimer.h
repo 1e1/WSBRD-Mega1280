@@ -32,7 +32,7 @@
 // VELOCITY (choose inside macros.h)
 //#define WS_EMBEDTIME EMBEDTIME_65s_4h
 //#define WS_EMBEDTIME EMBEDTIME_16s_1h
-#define WS_EMBEDTIME EMBEDTIME_1s_4m
+#define WS_EMBEDTIME WS_EMBEDTIME_1s_4m
 
 
 #define WSFT_SECTION_1   7
