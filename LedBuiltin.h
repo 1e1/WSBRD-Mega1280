@@ -10,19 +10,18 @@
 
 
 
-class LedBuiltin : public Circuit {
+class LedBuiltin : public AbstractCircuit {
 
   public:
+  typedef enum { OFF=0, IDLE=15, WORK=63, ON=255 } State;
+
   LedBuiltin(const byte pin);
-  __attribute__((always_inline)) inline void custom(const uint8_t value) { analogWrite(this->_pin, value); };
+  __attribute__((always_inline)) inline void state(const State value) { analogWrite(this->_pin, value); };
 
-  __attribute__((always_inline)) inline void on  () { digitalWrite(this->_pin, HIGH); };
-  __attribute__((always_inline)) inline void off () { digitalWrite(this->_pin,  LOW); };
-
-  //inline void check() { on(); };
-  inline void work()  { this->custom(63); };
-  inline void idle()  { this->custom(15); };
-  inline void clean() { off(); };
+  inline void check() { this->state(State::ON  ); };
+  inline void work()  { this->state(State::WORK); };
+  inline void idle()  { this->state(State::IDLE); };
+  inline void clean() { this->state(State::OFF ); };
 
   protected:
   byte _pin;
